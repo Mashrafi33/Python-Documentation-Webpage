@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylessheet" href="styles.css">
+    <meta charset="utf-8">
+    <meat name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="python" content="documentation">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Python Documentation</header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#Introduction">Introduction</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Prerequisites">Prerequisites</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Hello_World">Hello World</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Variables">Variables</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Declaring_a_Variable">Declaring a Variable</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Variable_Scope">Variable Scope</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Data_Types">Data Types</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#if...else_statement">if...else statement</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#While_Statement">While Statement</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Function_Declaration">Function Declaration</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Reference">Reference</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.</p>
+          <p>Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.</p>
+          <ul>
+            <li>Python can serve as a scripting language for web applications, e.g. via mod_wsgi for the Apache webserver. With Web Server Gateway Interface, a standard API has evolved to facilitate these applications. Web frameworks like Django, Pylons, Pyramid, TurboGears, web2py, Tornado, Flask, Bottle, and Zope support developers in the design and maintenance of complex applications.</li>
+            <li>
+              Libraries such as NumPy, SciPy and Matplotlib allow the effective use of Python in scientific computing, with specialized libraries such as Biopython and Astropy providing domain-specific functionality.
+            </li>
+            <li>OpenCV has Python bindings with a rich set of features for computer vision and image processing.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Prerequisites">
+        <header>Prerequisites</header>
+        <article>
+          <p>Before you embark on this coding adventure, make sure you have the following:</p>
+          <ul>
+            <li>Make sure python is installed on my computer.</li>
+            <li>You need to install code editor like VSCode, Vim, or Sublime.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Hello_World">
+        <header>Hello World</header>
+        <article>
+          To get started with python open up this online <a href="https://www.programiz.com/python-programming/online-compiler/">python editor</a> and write the following code:
+          <code>print("Hellow World!")</code>
+          Run this code and and unfold it into your browser 
+        </article>
+      </section>
+      <section class="main-section" id="Variables">
+        <header>Variables</header>
+          <article>
+          <p>Variables are essential for holding onto and referencing values throughout our application. By storing a value into a variable, you can reuse it as many times and in whatever way you like throughout your project.
+          </p>
+          <p>You can think of variables as boxes with labels, where the label represents the variable name and the content of the box is the value that the variable holds.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Declaring_a_Variable">
+        <header>Declaring a Variable</header>
+        <article>
+          <p>Assigning a value to a variable in Python is an easy process.</p>
+          <p>You simply use the equal sign <code class="equal">=</code> as an assignment operator, followed by the value you want to assign to the variable. Here's an example:</p>
+          <code>country = "United States"
+            year_founded = 1776</code>
+            <p>In this example, we've created two variables: <code class="equal">country</code> and <code class="equal">year_founded</code>. We've assigned the string value <code class="equal">"United States"</code> to the country variable and integer value <code class="equal">1776</code> to the year_founded variable.</p>
+            <p>There are two things to note in this example:</p>
+            <ol>
+              <li>Variables in Python are <strong>case-sensitive</strong>. In other words, watch your casing when creating variables, because <code class="equal">Year_Founded</code> will be a different variable than <code class="equal">year_founded</code> even though they include the same letters</li>
+              <li>Variable names that use multiple words in Python should be separated with an underscore <code class="equal">_</code>. For example, a variable named "site name" should be written as "site_name". This convention is called <strong>snake case</strong> (very fitting for the "Python" language).</li>
+            </ol>
+        </article>
+      </section>
+      <section class="main-section" id="Variable_Scope">
+        <header>Variable Scope</header>
+        <article>
+          <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
+          <h4>Local Variable:</h4>
+          <code>def f():
+    <span class="indent"># local variable</span>
+    <span class="indent">s = "I love Geeksforgeeks"</span>
+    <span class="indent">print(s)</span>
+ 
+# Driver code
+f()</code>
+          <h4>Global Variable:</h4>
+          <code># This function uses global variable s
+def f():
+    <span class="indent">print(s)<span>
+ 
+# Global scope
+s = "I love Geeksforgeeks"
+f()</code>
+        </article>
+      </section>
+      <section class="main-section" id="Data_Types">
+        <header>Data Types</header>
+        <article>
+          <p>One of the best features of Python is its flexibility when it comes to handling various data types. Python variables can hold various data types, including integers, floats, strings, booleans, tuples and lists:</p>
+          <p><strong>Integers</strong> are whole numbers, both positive and negative.
+<code>answer = 42</code></p>
+          <p><strong>Floats</strong> are real numbers or numbers with a decimal point.
+<code>weight = 34.592</code></p>
+          <p><strong>Strings</strong> are sequences of characters, namely words or sentences.
+<code>message = "Hello Python"</code></p>
+          <p><strong>Booleans</strong> are True or False values.
+<code>is_authenticated = True</code></p>
+          <p><strong>Lists</strong> are ordered, mutable collections of values.
+<code>fruits = ['apple', 'banana', 'cherry']</code></p>
+          <p><strong>Tuples</strong> are ordered, immutable collections of values.
+<code>point = (3, 4)</code></p>
+          <p>There are more data types in Python, but these are the most common ones you will encounter while working with Python variables.</p>
+        </article>
+      </section>
+      <section class="main-section" id="if...else_statement">
+        <header>if...else statement</header>
+        <article>
+          <p>Python supports the usual logical conditions from mathematics:</p>
+          <ul>
+            <li>Equals: <code class="equal">a == b</code></li>
+            <li>Not Equals: <code class="equal">a != b</code></li>
+            <li>Less than: <code class="equal">a < b</code></li>
+            <li>Less than or equal to: <code class="equal">a <= b</code></li>
+            <li>Greater than: <code class="equal">a > b</code></li>
+            <li>Greater than or equal to: <code class="equal">a >= b</code></li>
+          </ul>
+          <p>These conditions can be used in several ways, most commonly in "if statements" and loops.</p>
+          <p>An "if statement" is written by using the if keyword.</p>
+          <code>a = 33
+b = 200
+if b > a:
+<span class="indent">print("b is greater than a")</span></code>
+          <p>The <code class="equal">elif</code> keyword is Python's way of saying "if the previous conditions were not true, then try this condition".</p>
+          <code>a = 33
+b = 33
+if b > a:
+  <span class="indent">print("b is greater than a")</span>
+elif a == b:
+  <span class="indent">print("a and b are equal")</span></code>
+          <p>In this example <code class="equal">a</code> is equal to <code class="equal">b</code>, so the first condition is not true, but the <code class="equal">elif</code> condition is true, so we print to screen that "a and b are equal".</p>
+          <p>The <code class="equal">else</code> keyword catches anything which isn't caught by the preceding conditions.</p>
+          <code>a = 200
+b = 33
+if b > a:
+  <span class="indent">print("b is greater than a")</span>
+elif a == b:
+  <span class="indent">print("a and b are equal")</span>
+else:
+  <span class="indent">print("a is greater than b")</span></code>
+          <p>In this example <code class="equal">a</code> is greater than <code class="equal">b</code>, so the first condition is not true, also the <code class="equal">elif</code> condition is not true, so we go to the <code class="equal">else</code> condition and print to screen that "a is greater than b".</p>
+          <p>You can also have an <code class="equal">else</code> without the <code class="equal">elif</code>:</p>
+          <code>a = 200
+b = 33
+if b > a:
+  <span class="indent">print("b is greater than a")</span>
+else:
+  <span class="indent">print("b is not greater than a")</span></code>
+        </article>
+      </section>
+      <section class="main-section" id="While_Statement">
+        <header>While Statement</header>
+        <article>
+          <p>Python has two primitive loop commands:</p>
+          <ul>
+            <li><code class="equal">while loops</code></li>
+            <li><code class="equal">for loops</code></li>
+          </ul>
+          <p>With the while loop we can execute a set of statements as long as a condition is true.</p>
+          <code>i = 1
+while i < 6:
+  <span class="indent">print(i)</span>
+  <span class="indent">i += 1</span></code>
+          <div class="note">
+            <p><strong>Note</strong>: remember to increment i, or else the loop will continue forever.</p>
+          </div>
+          <p>The while loop requires relevant variables to be ready, in this example we need to define an indexing variable, <code class="equal">i</code>, which we set to <code class="equal">1</code>.</p>
+          <h4>Break Statement</h4>
+          <p>With the <code class="equal">break</code> statement we can stop the loop even if the while condition is true:</p>
+          <code>i = 1
+while i < 6:
+  <span class="indent">print(i)</span>
+  <span class="indent">if i == 3:</span>
+    <span class="indent"><span class="indent">break</span></span>
+  <span class="indent">i += 1</span></code>
+          <h4>Continue Statement</h4>
+          <p>With the <code class="equal">continue</code> statement we can stop the current iteration, and continue with the next:</p>
+          <code># Continue to the next iteration if i is 3
+
+i = 0
+while i < 6:
+  <span class="indent">i += 1</span>
+  <span class="indent">if i == 3:</span>
+    <span class="indent"><span class="indent">continue</span></span>
+  <span class="indent">print(i)</span></code>
+
+          <h4>Else Statement</h4>
+          <p>With the  <code class="equal">else</code> statement we can run a block of code once when the condition no longer is true:</p>
+          <code># Print a message once the condition is false
+
+i = 1
+while i < 6:
+  <span class="indent">print(i)</span>
+  <span class="indent">i += 1</span>
+else:
+  <span class="indent">print("i is no longer less than 6")</span>
+</code>
+        </article>
+      </section>
+      <section class="main-section" id="Function_Declaration">
+        <header>Function Declaration</header>
+        <article>
+          <ul>
+            <li>A function is a block of code which only runs when it is called.</li>
+            <li>You can pass data, known as parameters, into a function.</li>
+            <li>A function can return data as a result.</li>
+          </ul>
+          <h4>Creating a Function</h4>
+          <p>In Python a function is defined using the <code class="equal">def</code> keyword:</p>
+          <code>def my_function():
+  <span class="indent">print("Hello from a function")</span></code>
+          <h4>Calling a Function</h4>
+          <p>To call a function, use the function name followed by parenthesis:</p>
+          <code>def my_function():
+  <span class="indent">print("Hello from a function")</span>
+
+my_function()</code>
+          <p>Now <code class="equal">my_function()</code> is gonna print <strong>Hello from a function</strong></p>
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>All the documentation in this page have taken from <a href="https://technical-documentation-page.freecodecamp.rocks/" target="blank">Demo</a>(from freeCodeCamp), <a href="https://www.w3schools.com/python/default.asp" target="blank">W3 School</a>, <a href="https://www.geeksforgeeks.org/python-programming-language-tutorial/?ref=home-articlecards" target="blank">GeeksforGeeks</a> and <a href="https://www.freecodecamp.org/news/learn-python-free-python-courses-for-beginners/" target="blank">freeCodeCamp</a>.</article>
+      </section>
+    </main>
+  </body>
+</html>
